@@ -7,7 +7,7 @@
 //  
 
 #import "FMMoveTableView.h"
-#import "FMMoveTableViewCell.h"
+#import "FMMoveTableViewCellProtocol.h"
 
 
 /**
@@ -220,6 +220,17 @@
 - (void)moveRowToLocation:(CGPoint)location
 {
 	NSIndexPath *newIndexPath = [self indexPathForRowAtPoint:location];
+    
+    // Create newIndexPath for moving into empty section
+    if (newIndexPath == nil) {
+        for (int i = 0; i < self.numberOfSections; i++) {
+            CGRect sectionRect = [self rectForSection:i];
+            if (CGRectContainsPoint(sectionRect, location)) {
+                newIndexPath = [NSIndexPath indexPathForRow:0 inSection:i];
+            }
+        }
+    }
+    
     if (![self canMoveToIndexPath:newIndexPath]) {
         return;
     }
@@ -328,12 +339,11 @@
 
 - (UIView *)snapshotFromRowAtMovingIndexPath
 {
-    UITableViewCell* touchedCell = [self cellForRowAtIndexPath:self.movingIndexPath];
-    id<FMMoveTableViewCell> touchedMoveCell = (id<FMMoveTableViewCell>)touchedCell;
+    UITableViewCell<FMMoveTableViewCellProtocol> *touchedCell = [self cellForRowAtIndexPath:self.movingIndexPath];
     touchedCell.selected = NO;
     touchedCell.highlighted = NO;
 
-    [touchedMoveCell prepareForMoveSnapshot];
+    [touchedCell prepareForMoveSnapshot];
     
     UIView *snapshot = [touchedCell snapshotViewAfterScreenUpdates:YES];
     snapshot.frame = touchedCell.frame;
@@ -343,7 +353,7 @@
     snapshot.layer.shadowOffset = CGSizeZero;
     snapshot.layer.shadowPath = [[UIBezierPath bezierPathWithRect:snapshot.layer.bounds] CGPath];
 
-    [touchedMoveCell prepareForMove];
+    [touchedCell prepareForMove];
     
     return snapshot;
 }

@@ -16,12 +16,12 @@
 		1763810E1521B9F000BF24A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1763810C1521B9F000BF24A4 /* MainStoryboard.storyboard */; };
 		176381111521B9F000BF24A4 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176381101521B9F000BF24A4 /* FMViewController.m */; };
 		176381221521BBF800BF24A4 /* FMMoveTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1763811F1521BBF800BF24A4 /* FMMoveTableView.m */; };
-		176381231521BBF800BF24A4 /* FMMoveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 176381211521BBF800BF24A4 /* FMMoveTableViewCell.m */; };
 		176381261521BCBF00BF24A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176381251521BCBF00BF24A4 /* QuartzCore.framework */; };
 		176381281521BD8900BF24A4 /* Movies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 176381271521BD8900BF24A4 /* Movies.plist */; };
 		176381371521E5EC00BF24A4 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 176381361521E5EC00BF24A4 /* README.markdown */; };
 		17AE14AC1A0C0E45003E1144 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AE14AB1A0C0E45003E1144 /* Launch Screen.xib */; };
 		17C3839717D3185F00AA4EEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C3839617D3185F00AA4EEB /* Images.xcassets */; };
+		7B8304CC2226399200DC5D82 /* FMMovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8304CB2226399200DC5D82 /* FMMovieTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +40,7 @@
 		176381101521B9F000BF24A4 /* FMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FMViewController.m; path = Classes/FMViewController.m; sourceTree = "<group>"; };
 		1763811E1521BBF800BF24A4 /* FMMoveTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMMoveTableView.h; path = ../FMFramework/FMMoveTableView.h; sourceTree = "<group>"; };
 		1763811F1521BBF800BF24A4 /* FMMoveTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMMoveTableView.m; path = ../FMFramework/FMMoveTableView.m; sourceTree = "<group>"; };
-		176381201521BBF800BF24A4 /* FMMoveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMMoveTableViewCell.h; path = ../FMFramework/FMMoveTableViewCell.h; sourceTree = "<group>"; };
-		176381211521BBF800BF24A4 /* FMMoveTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMMoveTableViewCell.m; path = ../FMFramework/FMMoveTableViewCell.m; sourceTree = "<group>"; };
+		176381201521BBF800BF24A4 /* FMMoveTableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMMoveTableViewCellProtocol.h; path = ../FMFramework/FMMoveTableViewCellProtocol.h; sourceTree = "<group>"; };
 		176381251521BCBF00BF24A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		176381271521BD8900BF24A4 /* Movies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Movies.plist; path = FMMoveTable/Movies.plist; sourceTree = "<group>"; };
 		176381361521E5EC00BF24A4 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
@@ -49,6 +48,8 @@
 		179BE5F319052F86006D6CE2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		17AE14AB1A0C0E45003E1144 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "FMMoveTable/Launch Screen.xib"; sourceTree = "<group>"; };
 		17C3839617D3185F00AA4EEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FMMoveTable/Images.xcassets; sourceTree = "<group>"; };
+		7B8304CA2226399200DC5D82 /* FMMovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMMovieTableViewCell.h; sourceTree = "<group>"; };
+		7B8304CB2226399200DC5D82 /* FMMovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMMovieTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +118,7 @@
 			children = (
 				1763811E1521BBF800BF24A4 /* FMMoveTableView.h */,
 				1763811F1521BBF800BF24A4 /* FMMoveTableView.m */,
-				176381201521BBF800BF24A4 /* FMMoveTableViewCell.h */,
-				176381211521BBF800BF24A4 /* FMMoveTableViewCell.m */,
+				176381201521BBF800BF24A4 /* FMMoveTableViewCellProtocol.h */,
 			);
 			name = FMFramework;
 			path = FMMoveTable;
@@ -132,6 +132,8 @@
 				176381091521B9F000BF24A4 /* AppDelegate.h */,
 				1763810A1521B9F000BF24A4 /* AppDelegate.m */,
 				1763810C1521B9F000BF24A4 /* MainStoryboard.storyboard */,
+				7B8304CA2226399200DC5D82 /* FMMovieTableViewCell.h */,
+				7B8304CB2226399200DC5D82 /* FMMovieTableViewCell.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -183,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FM;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 1010;
 			};
 			buildConfigurationList = 176380F01521B9F000BF24A4 /* Build configuration list for PBXProject "FMMoveTable" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -240,10 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				176381071521B9F000BF24A4 /* main.m in Sources */,
+				7B8304CC2226399200DC5D82 /* FMMovieTableViewCell.m in Sources */,
 				1763810B1521B9F000BF24A4 /* AppDelegate.m in Sources */,
 				176381111521B9F000BF24A4 /* FMViewController.m in Sources */,
 				176381221521BBF800BF24A4 /* FMMoveTableView.m in Sources */,
-				176381231521BBF800BF24A4 /* FMMoveTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,19 +277,30 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -301,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -313,18 +326,28 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -332,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,7 +370,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FMMoveTable/Prefix.pch;
 				INFOPLIST_FILE = FMMoveTable/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.madeFM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -361,7 +385,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FMMoveTable/Prefix.pch;
 				INFOPLIST_FILE = FMMoveTable/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.madeFM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

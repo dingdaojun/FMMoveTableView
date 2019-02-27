@@ -9,8 +9,8 @@
 
 #import "FMViewController.h"
 #import "FMMoveTableView.h"
-#import "FMMoveTableViewCell.h"
-
+#import "FMMoveTableViewCellProtocol.h"
+#import "FMMovieTableViewCell.h"
 
 @interface FMViewController ()
 
@@ -80,7 +80,7 @@ static NSString *sCellIdentifier;
 
 - (UITableViewCell *)tableView:(FMMoveTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	FMMoveTableViewCell *cell = (FMMoveTableViewCell *)[tableView dequeueReusableCellWithIdentifier:sCellIdentifier];
+	FMMovieTableViewCell<FMMoveTableViewCellProtocol> *cell = [tableView dequeueReusableCellWithIdentifier:sCellIdentifier forIndexPath:indexPath];
 	
 
 	#warning Implement this check in your table view data source
@@ -191,8 +191,8 @@ static NSString *sCellIdentifier;
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
     
     NSMutableArray *sampleData = [[dict valueForKey:@"Movies"] mutableCopy];
-    NSRange rangeOne = NSMakeRange(0, 15);
-    NSRange rangeTwo = NSMakeRange(15, 15);
+    NSRange rangeOne = NSMakeRange(0, 28);
+    NSRange rangeTwo = NSMakeRange(28, 2);
     
     NSMutableArray *sectionOne = [[sampleData objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:rangeOne]] mutableCopy];
     NSMutableArray *sectionTwo = [[sampleData objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:rangeTwo]] mutableCopy];

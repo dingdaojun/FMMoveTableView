@@ -1,5 +1,5 @@
 //
-//  FMMoveTableViewCell.h
+//  FMMoveTableViewCellProtocol.h
 //  FMFramework
 //
 //  Created by Florian Mielke.
@@ -7,7 +7,7 @@
 //  
 
 
-@protocol FMMoveTableViewCell <NSObject>
+@protocol FMMoveTableViewCellProtocol <NSObject>
 
 - (void)prepareForMoveSnapshot;
 - (void)prepareForMove;
